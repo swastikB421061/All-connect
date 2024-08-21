@@ -42,7 +42,7 @@ const RightPanel = () => {
 	return (
 		<div className="hidden md:block my-2 mx-2">
 			<div className="bg-[#16181C] p-4 rounded-md sticky top-2 shadow-lg">
-				<p className="font-bold text-lg mb-4">Who to follow</p>
+				<p className="font-bold text-lg mb-4">Search here...</p>
 				<div className="my-2">
 					<input
 						type="text"

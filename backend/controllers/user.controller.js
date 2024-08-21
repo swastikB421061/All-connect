@@ -71,8 +71,7 @@ export const getSuggestedUsers = async (req, res) => {
 				$match: {
 					_id: { $ne: userId },
 				},
-			},
-			{ $sample: { size: 10 } },
+			}
 		]);
 
 		// 1,2,3,4,5,6,
