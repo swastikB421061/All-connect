@@ -83,11 +83,11 @@ const RightPanel = () => {
 									{/* <span className="font-semibold tracking-tight truncate w-10 text-white">
 										{user.fullName.substring(0, 7)}
 									</span> */}
-									<span className="text-sm text-slate-400">@{`${user.username.substring(0, 7)}...`}</span>
+									<span className="text-sm text-slate-400">@{`${user.username.substring(0, 10)}...`}</span>
 								</div>
 							</div>
 							<div>
-								<button
+								{/* <button
 									className="btn bg-blue-500 text-white hover:bg-blue-600 hover:opacity-90 rounded-full btn-sm px-4 py-1"
 									onClick={(e) => {
 										e.preventDefault();
@@ -95,7 +95,7 @@ const RightPanel = () => {
 									}}
 								>
 									{isPending ? <LoadingSpinner size="sm" /> : "Follow"}
-								</button>
+								</button> */}
 							</div>
 						</Link>
 					))}
