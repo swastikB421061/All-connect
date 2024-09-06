@@ -4,16 +4,16 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import { v2 as cloudinary } from "cloudinary";
 
-import authRoutes from "./routes/auth.route.js";
-import userRoutes from "./routes/user.route.js";
-import postRoutes from "./routes/post.route.js";
-import notificationRoutes from "./routes/notification.route.js";
+import authRoutes from "./backend/routes/auth.route.js";
+import userRoutes from "./backend/routes/user.route.js";
+import postRoutes from "./backend/routes/post.route.js";
+import notificationRoutes from "./backend/routes/notification.route.js";
 
-import connectMongoDB from "./db/connectMongoDB.js";
+import connectMongoDB from "./backend/db/connectMongoDB.js";
 
 dotenv.config();
 
-console.log('Environment Variables:', process.env);
+// console.log('Environment Variables:', process.env);
 
 cloudinary.config({
 	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -34,7 +34,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/notifications", notificationRoutes);
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "development") {
 	app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 	app.get("*", (req, res) => {
